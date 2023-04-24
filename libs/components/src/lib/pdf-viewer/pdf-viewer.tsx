@@ -53,7 +53,7 @@ export function PdfViewer({ filePath }: IPdfViewerProps) {
                 onLoadSuccess={onDocumentLoadSuccess}
               >
                 {pages.map((page) => (
-                  <Page pageNumber={page} />
+                  <Page key={page} pageNumber={page} />
                 ))}
               </Document>
             </TransformComponent>
